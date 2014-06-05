@@ -1,13 +1,13 @@
 <script type="text/javascript">
 		
 		// Bloqueia no input qualquer caracter que nao seje numerico
-		// Ex: <input type="number" onkeypress="return SomenteNumero(event);">
-		function SomenteNumero(e) {
-			  var tecla=(window.event)?event.keyCode:e.which;   
-			  if(tecla > 47 && tecla < 58)
+		// Ex: <input type="number" onkeypress="return NumbersOnly(event);">
+		function NumbersOnly(e) {
+			  var key = (window.event)?event.keyCode:e.which;   
+			  if(key > 47 && key < 58)
 				  return true;
 			  else {
-			    if (tecla == 8 || tecla == 0) 
+			    if (key == 8 || key == 0) 
 			    	return true;
 				  else  
 					  return false;
