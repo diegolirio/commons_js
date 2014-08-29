@@ -8,7 +8,7 @@ function showWindowPopup(url) {
 }
 
 
-/*
+/* function: closeWindowPopupStatusNormal
  * Utilizado especificamente para uma janela popup.
  * Atraves do status(OK), exibe a mensagem (message) e manipula a janela Pai(Janela principal que chamou a janela menor),
  *  essa manipulacao acontece atraves de um Elemento que contenha o atributo id (quinto parametro) definido, nesse 
@@ -27,7 +27,6 @@ function showWindowPopup(url) {
  * <script type="text/javascript">
  *    closeWindowPopupStatusNormal('OK', 'Curso gravado com sucesso', 15, 'Javascript', 'id_cursos');
  * </script>
- *
  */
 function closeWindowPopupStatusNormal(status, message, value, dysplay, id) {
     if(status == 'OK') { 
