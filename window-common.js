@@ -7,6 +7,11 @@ function showWindowPopup(url) {
 	w = window.open(url,'','height=550, width=750, top=150, left=250, scrollbars=no, resizable=no');		
 }
 
+// Exibe uma janela menor, esperando a medida (modal/popup)
+function showWindowPopup(url, hgt, wdh) {
+	w = window.open(url,'','height='+hgt+', width='+wdh+', top=150, left=250, scrollbars=no, resizable=no');		
+}
+
 
 /* function: closeWindowPopupStatusNormal
  * Utilizado especificamente para uma janela popup.
