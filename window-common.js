@@ -34,7 +34,7 @@ function showWindowPopup(url, hgt, wdh) {
  * </script>
  */
 function closeWindowPopupStatusNormal(status, message, value, dysplay, id) {
-    if(status == 'OK') { 
+    if(status == 200 || status == 201) { 
         alert(message);
         var option = window.opener.document.createElement('option');
         var valueAtt = document.createAttribute("value");
@@ -55,14 +55,4 @@ function closeWindowPopupStatusNormal(status, message, value, dysplay, id) {
 	//          $(id, window.opener.document).get(0).selectedIndex = index;
 	//          window.close();
 	//  }               
-}
-
-function closeWindowPopupStatusNormalJQuery(status, message, value, dysplay, id) {
-	  if(status == 201 || status == 200) {
-	        alert(message);
-	        $(id, window.opener.document).append('<option value="'+value+'">'+dysplay+'</option>');                 
-	        var index = $(id +' option', window.opener.document).length-1;                  
-	        $(id, window.opener.document).get(0).selectedIndex = index;
-	        window.close();
-	  }   	
 }
