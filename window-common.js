@@ -56,3 +56,13 @@ function closeWindowPopupStatusNormal(status, message, value, dysplay, id) {
 	//          window.close();
 	//  }               
 }
+
+function closeWindowPopupStatusNormalJQuery(status, message, value, dysplay, id) {
+	  if(status == 201 || status == 200) {
+	        alert(message);
+	        $(id, window.opener.document).append('<option value="'+value+'">'+dysplay+'</option>');                 
+	        var index = $(id +' option', window.opener.document).length-1;                  
+	        $(id, window.opener.document).get(0).selectedIndex = index;
+	        window.close();
+	  }   	
+}
