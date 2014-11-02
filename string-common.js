@@ -38,11 +38,16 @@
 	
 	    var max = (length - valueString.length)/charIncluded.length;
 	    for (var i = 0; i < max; i++) {
-	        valueString += charIncluded;
+	        valueString += charIncluded ;
 	    }
 	
 	    return valueString;
 	}
-
+	
+	function isEmpty(str) {
+		if(str == '' || str == undefined) 
+			return false;
+		return true;
+	}
 
 </script>
