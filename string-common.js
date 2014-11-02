@@ -44,7 +44,7 @@
 	}
 	
 	function isEmpty(str) {
-		if(str == '' || str == undefined) 
+		if(str == '' || str == undefined || str == null) 
 			return false;
 		return true;
 	}
