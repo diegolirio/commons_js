@@ -40,8 +40,8 @@ function closeWindowPopupStatusNormal(status, message, value, dysplay, id) {
         var valueAtt = document.createAttribute("value");
         valueAtt.nodeValue = value;
         option.setAttributeNode(valueAtt);
-        var dysplay = document.createTextNode(dysplay);
-        option.appendChild(dysplay);
+        var dysplayOption = document.createTextNode(dysplay);
+        option.appendChild(dysplayOption);
         window.opener.document.getElementById(id).appendChild(option);                  
         var index = window.opener.document.getElementById(id).length-1;
         window.opener.document.getElementById(id).selectedIndex = index;
